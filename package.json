@@ -1,0 +1,63 @@
+{
+  "name": "agent-credo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "node dist/app.js",
+    "start:dev": "nodemon --exec ts-node src/app.ts",
+    "dist": "electron-builder",
+    "serve": "node dist/index.js",
+    "rebuild": "electron-rebuild --target=31.0.1 -f -w @2060.io/ffi-napi,@2060.io/ref-napi,@credo-ts/askar,@credo-ts/core,@credo-ts/node,@hyperledger/aries-askar-nodejs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "babel-plugin-transform-typescript-metadata": "^0.3.2",
+    "node-gyp-build": "^4.3.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@2060.io/ffi-napi": "^4.0.9",
+    "@2060.io/ref-napi": "^3.0.6",
+    "@cheqd/sdk": "^2.4.4",
+    "@cheqd/ts-proto": "~2.2.0",
+    "@cosmjs/crypto": "~0.30.0",
+    "@cosmjs/proto-signing": "~0.30.0",
+    "@credo-ts/anoncreds": "0.5.3",
+    "@credo-ts/askar": "0.5.3",
+    "@credo-ts/core": "0.5.3",
+    "@credo-ts/node": "0.5.3",
+    "@hyperledger/anoncreds-nodejs": "^0.2.2",
+    "@hyperledger/anoncreds-react-native": "^0.2.2",
+    "@hyperledger/aries-askar-nodejs": "^0.2.1",
+    "@stablelib/ed25519": "^1.0.3",
+    "buffer": "^6.0.3",
+    "class-transformer": "^0.5.1",
+    "class-validator": "0.14.1",
+    "ethers": "^6.13.1",
+    "express": "^4.19.2",
+    "g": "^2.0.1",
+    "inversify": "^6.0.2",
+    "nodemon": "^3.1.4",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.0",
+    "sqlite3": "^5.1.7",
+    "tsyringe": "^4.8.0"
+  },
+  "resolutions": {
+    "@cosmjs/amino": "npm:@cosmjs-rn/amino@^0.27.1",
+    "@cosmjs/encoding": "npm:@cosmjs-rn/encoding@^0.27.1",
+    "@cosmjs/math": "npm:@cosmjs-rn/math@^0.27.1",
+    "@cosmjs/stargate": "npm:@cosmjs-rn/stargate@^0.27.1",
+    "@cosmjs/tendermint-rpc": "npm:@cosmjs-rn/tendermint-rpc@^0.27.1",
+    "@cosmjs/utils": "npm:@cosmjs-rn/utils@^0.27.1",
+    "@cosmjs/proto-signing": "npm:@cosmjs-rn/proto-signing@^0.27.1",
+    "@cosmjs/crypto": "npm:@cosmjs-rn/crypto@^0.27.1"
+  }
+}
